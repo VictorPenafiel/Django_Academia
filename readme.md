@@ -2,116 +2,59 @@
 
 ## Descripción del proyecto
 
-La Municipalidad de Santiago, ha organizado una competencia de Skate para impulsar el nivel
-deportivo de los jóvenes que desean representar a Chile en los X Games del próximo año, y
-han iniciado con la gestión para desarrollar la plataforma web en la que los participantes se
-podrán registrar y revisar el estado de su solicitud
-En esta prueba deberás ocupar todos tus conocimientos para desarrollar un sistema que
-involucre tus habilidades como Full Stack Developer, consolidando tus competencias en el
-frontend y backend.
-Las tecnologías y herramientas que deberás ocupar son las siguientes:
-- Express
-- Handlebars
+Este proyecto es un sistema web integral para "Bootcamp Coders", enfocado en la gestión de estudiantes, relatores y cursos para sus programas de transformación digital. Como parte de un equipo multidisciplinario, mi rol es desarrollar una solución Fullstack robusta y escalable.
+
+Las tecnologías y herramientas ocupadas son las siguientes:
+- Python
+- Django
 - PostgreSQL
-- JWT
-- Express-fileupload
+- Bootstrap
 
 ## Consideraciones
 
 -  El sistema debe permitir registrar nuevos participantes.
--  Se debe crear una vista para que los participantes puedan iniciar sesión con su correo
-y contraseña.
--  Luego de iniciar la sesión, los participantes deberán poder modificar sus datos,
-exceptuando el correo electrónico y su foto. Esta vista debe estar protegida con JWT
-y los datos que se utilicen en la plantilla deben ser extraídos del token.
--  La vista correspondiente a la ruta raíz debe mostrar todos los participantes
-registrados y su estado de revisión.
--  La vista del administrador debe mostrar los participantes registrados y permitir
-aprobarlos para cambiar su estado.
+-  Se debe crear una vista para que los participantes puedan iniciar sesión con su correo y contraseña.
+-  Luego de iniciar la sesión, los participantes deberán poder modificar sus datos, exceptuando el correo electrónico y su foto. Esta vista esta protegida con csrf_token y los datos que se utilicen en la plantilla son extraídos del token.
+-  La vista del administrador debe mostrar los participantes registrados y permitir aprobarlos para cambiar su estado.
 
-## Comenzando 🚀
+## Instalación 🚀
 
-_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
-
-Mira **Deployment** para conocer como desplegar el proyecto.
-
+Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas.
 
 ### Pre-requisitos 📋
 
-_Que cosas necesitas para instalar el software y como instalarlas_
+Que cosas necesitas para instalar el software.
 
 ```
-Visual Studio Code, PyCharm
+Visual Studio Code, Node, Git, Github
 ```
-```
-Python 3
-```
-```
-Git, Github
-```
-```
-variables de entorno para python
-```
+
 ### Instalación 🔧
-
-```
+Realizar un fork o clon del proyecto.
 Importar proyecto al IDE de preferencia para ejecutar.
-```
-
-## Deployment 📦
-
-Realizar un fork o clon del proyecto, importar al IDE de preferencia, para ejecutar en consola realizar el build (empaquetado) de la aplicación.
-## Instrucciones para Cargar la Base de Datos 
-
-Se debe persistir la información de los usuarios en PostgreSQL, por lo que deberás usar las
-siguientes sentencias SQL para la creación de la base de datos y la tabla de participantes.
-
-## Instrucciones para crear la base de datos
-
+Para ejecutar en consola realizar el build (empaquetado) de la aplicación.
 
 ```bash
-sql
+git clone https://github.com/VictorPenafiel/Django_Academia.git
+cd proyecto
+python -m venv venv && source venv/bin/activate
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py runserver
 ```
-
-```bash
-CREATE DATABASE skatepark;
-
-CREATE TABLE skaters (id SERIAL, email VARCHAR(50) NOT NULL, nombre
-VARCHAR(25) NOT NULL, password VARCHAR(25) NOT NULL, anos_experiencia
-INT NOT NULL, especialidad VARCHAR(50) NOT NULL, foto VARCHAR(255) NOT
-NULL, estado BOOLEAN NOT NULL);
-
-```
-
-## Requerimientos
-1. Crear una API REST con el Framework Express (3 Puntos)
-2. Servir contenido dinámico con express-handlebars (3 Puntos)
-3. Ofrecer la funcionalidad Upload File con express-fileupload (2 Puntos)
-4. Implementar seguridad y restricción de recursos o contenido con JWT (2 Puntos)
-
-## Capturas de Pantalla del Proyecto terminado
-Registro
-
-![Imagenes](public/uploads/Screenshot_1.png)
-
-Login
-
-![Imagenes](public/uploads/Screenshot_2.png)
-
-
-Terminal
-
-![Imagenes](public/uploads/Screenshot_3.png)
 
 ## Construido con 🛠️
 
-* [Python](https://www.python.org/downloads/)
+* [Python](https://www.python.org/django)
 * [Visual Studio Code](https://code.visualstudio.com/)
 * [Git](https://git-scm.com/)
 * [GitHub](https://github.com/)
 
+## Contribuye 🖇️
 
-## Versionado 📌
+```bash
+# Fork → Crea rama → Cambios → Commit → Pull Request
+```
 
 ## Autores ✒️
 
@@ -119,6 +62,6 @@ https://github.com/victorpenafiel
 
 ## Licencia 📄
 
-Ningún derecho reservado.  [Creative Commons Atribución/Reconocimiento 4.0 ](https://creativecommons.org/licenses/by/4.0/deed.es).
+Ningún Derecho Reservado.  [Creative Commons Atribución/Reconocimiento 4.0 ](https://creativecommons.org/licenses/by/4.0/deed.es).
 
 Este proyecto está bajo la Licencia - mira el archivo [LICENSE.md](LICENSE.md) para detalles
